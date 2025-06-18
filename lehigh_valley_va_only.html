@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c24c1dc204b135a55780fc4251e76153 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c24c1dc204b135a55780fc4251e76153" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c24c1dc204b135a55780fc4251e76153 = L.map(
+                "map_c24c1dc204b135a55780fc4251e76153",
+                {
+                    center: [40.75, -75.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4d14f619b827b905950886646d3073df = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4d14f619b827b905950886646d3073df.addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+        function geo_json_172b1527548fa798c4145e6bec35f76a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "salmon", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_172b1527548fa798c4145e6bec35f76a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_172b1527548fa798c4145e6bec35f76a = L.geoJson(null, {
+                onEachFeature: geo_json_172b1527548fa798c4145e6bec35f76a_onEachFeature,
+            
+                style: geo_json_172b1527548fa798c4145e6bec35f76a_styler,
+            ...{
+}
+        });
+
+        function geo_json_172b1527548fa798c4145e6bec35f76a_add (data) {
+            geo_json_172b1527548fa798c4145e6bec35f76a
+                .addData(data);
+        }
+            geo_json_172b1527548fa798c4145e6bec35f76a_add({"features": [{"geometry": {"coordinates": [[[-74.980674, 41.078178], [-74.968389, 41.087797], [-74.966759, 41.093425], [-74.967389, 41.094049], [-74.966349, 41.094003], [-74.78921, 40.931298], [-74.767874, 40.911823], [-74.889753, 40.787832], [-74.968454, 40.710791], [-75.190858, 40.591342], [-75.196803, 40.60858], [-75.200708, 40.618356], [-75.20392, 40.691498], [-75.196533, 40.751631], [-75.171587, 40.777745], [-75.16365, 40.778386], [-75.149378, 40.774786], [-75.1344, 40.773765], [-75.108505, 40.791094], [-75.053294, 40.8599], [-75.051029, 40.865662], [-75.052538, 40.872051], [-75.117764, 40.953023], [-75.119893, 40.961646], [-75.120316, 40.96263], [-75.120435, 40.968302], [-75.120564, 40.968313], [-75.131364, 40.969277], [-75.135526, 40.973807], [-75.130575, 40.991093], [-75.109114, 41.004102], [-75.091377, 41.012283], [-75.069277, 41.019348], [-75.051794, 41.027142], [-75.036982, 41.034702], [-75.026003, 41.042687], [-74.980674, 41.078178]]], "type": "Polygon"}, "id": "34041", "properties": {"CENSUSAREA": 356.918, "COUNTY": "041", "GEO_ID": "0500000US34041", "LSAD": "County", "NAME": "Warren", "STATE": "34"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_172b1527548fa798c4145e6bec35f76a.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["NAME"];
+    let aliases = ["County:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_172b1527548fa798c4145e6bec35f76a.addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var marker_2cad093e58848691ac40d221e108e220 = L.marker(
+                [40.85180326025225, -75.00166659477313],
+                {
+}
+            ).addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var div_icon_78ab42bde29b01a7864184a500830d8c = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:12px; font-weight:bold; color:white; text-shadow:1px 1px 2px black;\"\u003eWarren\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_2cad093e58848691ac40d221e108e220.setIcon(div_icon_78ab42bde29b01a7864184a500830d8c);
+            
+    
+        function geo_json_ed44b73c380f068dc05fc85cfdd0e652_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "lightblue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_ed44b73c380f068dc05fc85cfdd0e652_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ed44b73c380f068dc05fc85cfdd0e652 = L.geoJson(null, {
+                onEachFeature: geo_json_ed44b73c380f068dc05fc85cfdd0e652_onEachFeature,
+            
+                style: geo_json_ed44b73c380f068dc05fc85cfdd0e652_styler,
+            ...{
+}
+        });
+
+        function geo_json_ed44b73c380f068dc05fc85cfdd0e652_add (data) {
+            geo_json_ed44b73c380f068dc05fc85cfdd0e652
+                .addData(data);
+        }
+            geo_json_ed44b73c380f068dc05fc85cfdd0e652_add({"features": [{"geometry": {"coordinates": [[[-75.474193, 40.814746], [-75.300594, 40.859563], [-75.120564, 40.968313], [-75.120435, 40.968302], [-75.120316, 40.96263], [-75.119893, 40.961646], [-75.117764, 40.953023], [-75.052538, 40.872051], [-75.051029, 40.865662], [-75.053294, 40.8599], [-75.108505, 40.791094], [-75.1344, 40.773765], [-75.149378, 40.774786], [-75.16365, 40.778386], [-75.171587, 40.777745], [-75.196533, 40.751631], [-75.20392, 40.691498], [-75.200708, 40.618356], [-75.196803, 40.60858], [-75.333514, 40.537057], [-75.404412, 40.581154], [-75.430404, 40.674152], [-75.481469, 40.655744], [-75.608985, 40.787387], [-75.474193, 40.814746]]], "type": "Polygon"}, "id": "42095", "properties": {"CENSUSAREA": 369.671, "COUNTY": "095", "GEO_ID": "0500000US42095", "LSAD": "County", "NAME": "Northampton", "STATE": "42"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_ed44b73c380f068dc05fc85cfdd0e652.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["NAME"];
+    let aliases = ["County:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_ed44b73c380f068dc05fc85cfdd0e652.addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var marker_6647273b913745b436412e7ce97871bb = L.marker(
+                [40.75136136208792, -75.30798328398438],
+                {
+}
+            ).addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var div_icon_aa2b5edb63a27984dd49c0910129b1f4 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:12px; font-weight:bold; color:white; text-shadow:1px 1px 2px black;\"\u003eNorthampton\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_6647273b913745b436412e7ce97871bb.setIcon(div_icon_aa2b5edb63a27984dd49c0910129b1f4);
+            
+    
+        function geo_json_55e178013d67d324a5f2cb9cc35ac551_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "lightblue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_55e178013d67d324a5f2cb9cc35ac551_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_55e178013d67d324a5f2cb9cc35ac551 = L.geoJson(null, {
+                onEachFeature: geo_json_55e178013d67d324a5f2cb9cc35ac551_onEachFeature,
+            
+                style: geo_json_55e178013d67d324a5f2cb9cc35ac551_styler,
+            ...{
+}
+        });
+
+        function geo_json_55e178013d67d324a5f2cb9cc35ac551_add (data) {
+            geo_json_55e178013d67d324a5f2cb9cc35ac551
+                .addData(data);
+        }
+            geo_json_55e178013d67d324a5f2cb9cc35ac551_add({"features": [{"geometry": {"coordinates": [[[-75.997348, 40.912985], [-75.73193, 41.00822], [-75.77196, 41.076751], [-75.649637, 41.122344], [-75.49599, 40.987181], [-75.57459, 40.951323], [-75.474193, 40.814746], [-75.608985, 40.787387], [-75.757807, 40.735414], [-75.997348, 40.912985]]], "type": "Polygon"}, "id": "42025", "properties": {"CENSUSAREA": 381.46, "COUNTY": "025", "GEO_ID": "0500000US42025", "LSAD": "County", "NAME": "Carbon", "STATE": "42"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_55e178013d67d324a5f2cb9cc35ac551.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["NAME"];
+    let aliases = ["County:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_55e178013d67d324a5f2cb9cc35ac551.addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var marker_009e45b20b0be2a6fa921a410f2ae383 = L.marker(
+                [40.913167386901314, -75.70597315610999],
+                {
+}
+            ).addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var div_icon_2a239fe38b3492b326371ed41ea8d5f0 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:12px; font-weight:bold; color:white; text-shadow:1px 1px 2px black;\"\u003eCarbon\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_009e45b20b0be2a6fa921a410f2ae383.setIcon(div_icon_2a239fe38b3492b326371ed41ea8d5f0);
+            
+    
+        function geo_json_3a09eae1d5d0d93a0a2e3fb630393649_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "lightblue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_3a09eae1d5d0d93a0a2e3fb630393649_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_3a09eae1d5d0d93a0a2e3fb630393649 = L.geoJson(null, {
+                onEachFeature: geo_json_3a09eae1d5d0d93a0a2e3fb630393649_onEachFeature,
+            
+                style: geo_json_3a09eae1d5d0d93a0a2e3fb630393649_styler,
+            ...{
+}
+        });
+
+        function geo_json_3a09eae1d5d0d93a0a2e3fb630393649_add (data) {
+            geo_json_3a09eae1d5d0d93a0a2e3fb630393649
+                .addData(data);
+        }
+            geo_json_3a09eae1d5d0d93a0a2e3fb630393649_add({"features": [{"geometry": {"coordinates": [[[-75.694308, 40.551149], [-75.738038, 40.579105], [-75.739442, 40.57994], [-75.76674, 40.597033], [-75.891473, 40.67727], [-75.757807, 40.735414], [-75.608985, 40.787387], [-75.481469, 40.655744], [-75.430404, 40.674152], [-75.404412, 40.581154], [-75.333514, 40.537057], [-75.338633, 40.534068], [-75.36661, 40.515424], [-75.367911, 40.514601], [-75.409733, 40.487984], [-75.484057, 40.418451], [-75.529694, 40.446995], [-75.682238, 40.543638], [-75.694308, 40.551149]]], "type": "Polygon"}, "id": "42077", "properties": {"CENSUSAREA": 345.166, "COUNTY": "077", "GEO_ID": "0500000US42077", "LSAD": "County", "NAME": "Lehigh", "STATE": "42"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_3a09eae1d5d0d93a0a2e3fb630393649.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["NAME"];
+    let aliases = ["County:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_3a09eae1d5d0d93a0a2e3fb630393649.addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var marker_1411fc3e1a92608bcd9583bbc085f334 = L.marker(
+                [40.61212978300357, -75.59564593854462],
+                {
+}
+            ).addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var div_icon_c25518fc32171ff5b751825fa2774d44 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:12px; font-weight:bold; color:white; text-shadow:1px 1px 2px black;\"\u003eLehigh\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_1411fc3e1a92608bcd9583bbc085f334.setIcon(div_icon_c25518fc32171ff5b751825fa2774d44);
+            
+    
+            var marker_322325388fa4bacb0e272fb43104ecc9 = L.marker(
+                [40.6025, -75.4695],
+                {
+}
+            ).addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var icon_0ab254a8f65ce956551815733894879b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c3010168d0f93d7fe29648303d99ce00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fbfb29c21d92ca8defb5c0a21f0a65b5 = $(`<div id="html_fbfb29c21d92ca8defb5c0a21f0a65b5" style="width: 100.0%; height: 100.0%;"><b>Lehigh County Veterans Affairs Office</b></div>`)[0];
+                popup_c3010168d0f93d7fe29648303d99ce00.setContent(html_fbfb29c21d92ca8defb5c0a21f0a65b5);
+            
+        
+
+        marker_322325388fa4bacb0e272fb43104ecc9.bindPopup(popup_c3010168d0f93d7fe29648303d99ce00)
+        ;
+
+        
+    
+    
+                marker_322325388fa4bacb0e272fb43104ecc9.setIcon(icon_0ab254a8f65ce956551815733894879b);
+            
+    
+            var marker_5c7102a80d028ed46d24f0ed1b647ba7 = L.marker(
+                [40.8676, -75.2012],
+                {
+}
+            ).addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var icon_204544deb838bd950a00466a72d31ab7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0da7cac9a73184b950b596251c5213f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec88b939c1afcbb523cf0cda9a01bb7b = $(`<div id="html_ec88b939c1afcbb523cf0cda9a01bb7b" style="width: 100.0%; height: 100.0%;"><b>Northampton County VA Outpatient Clinic</b></div>`)[0];
+                popup_0da7cac9a73184b950b596251c5213f9.setContent(html_ec88b939c1afcbb523cf0cda9a01bb7b);
+            
+        
+
+        marker_5c7102a80d028ed46d24f0ed1b647ba7.bindPopup(popup_0da7cac9a73184b950b596251c5213f9)
+        ;
+
+        
+    
+    
+                marker_5c7102a80d028ed46d24f0ed1b647ba7.setIcon(icon_204544deb838bd950a00466a72d31ab7);
+            
+    
+            var marker_59059b7a173964918b18f1a73a5d69f6 = L.marker(
+                [40.6915, -75.2097],
+                {
+}
+            ).addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var icon_adff642ac14b2a204241a2ba3790f310 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ffe70c05b2a6034423496f3ad7f0f9ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a9029236691ef049b50b852a6a0e358 = $(`<div id="html_7a9029236691ef049b50b852a6a0e358" style="width: 100.0%; height: 100.0%;"><b>Northampton County Veterans Affairs</b></div>`)[0];
+                popup_ffe70c05b2a6034423496f3ad7f0f9ab.setContent(html_7a9029236691ef049b50b852a6a0e358);
+            
+        
+
+        marker_59059b7a173964918b18f1a73a5d69f6.bindPopup(popup_ffe70c05b2a6034423496f3ad7f0f9ab)
+        ;
+
+        
+    
+    
+                marker_59059b7a173964918b18f1a73a5d69f6.setIcon(icon_adff642ac14b2a204241a2ba3790f310);
+            
+    
+            var marker_cef5a3bc33e46d41fc7690ff1b28f991 = L.marker(
+                [40.8751, -75.7093],
+                {
+}
+            ).addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var icon_8b3aa83c9d783671aea4a0a6343deed3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a67ce9a057c63e580a099620eb947dcc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a7fbba685c10672f51fa6b64865fcad = $(`<div id="html_8a7fbba685c10672f51fa6b64865fcad" style="width: 100.0%; height: 100.0%;"><b>Carbon County Veterans Affairs</b></div>`)[0];
+                popup_a67ce9a057c63e580a099620eb947dcc.setContent(html_8a7fbba685c10672f51fa6b64865fcad);
+            
+        
+
+        marker_cef5a3bc33e46d41fc7690ff1b28f991.bindPopup(popup_a67ce9a057c63e580a099620eb947dcc)
+        ;
+
+        
+    
+    
+                marker_cef5a3bc33e46d41fc7690ff1b28f991.setIcon(icon_8b3aa83c9d783671aea4a0a6343deed3);
+            
+    
+            var marker_bec00981a3f5b030032d169e297f2ad2 = L.marker(
+                [40.8321, -75.7111],
+                {
+}
+            ).addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var icon_686ad7f9a4afbb0ba83f96fdbe1113b8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1573a68f50a50909807a4f8fa534a269 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dfe3c3f8b314a8c4f3a03ee7e15b5970 = $(`<div id="html_dfe3c3f8b314a8c4f3a03ee7e15b5970" style="width: 100.0%; height: 100.0%;"><b>Scranton Vet Center – Lehighton Satellite</b></div>`)[0];
+                popup_1573a68f50a50909807a4f8fa534a269.setContent(html_dfe3c3f8b314a8c4f3a03ee7e15b5970);
+            
+        
+
+        marker_bec00981a3f5b030032d169e297f2ad2.bindPopup(popup_1573a68f50a50909807a4f8fa534a269)
+        ;
+
+        
+    
+    
+                marker_bec00981a3f5b030032d169e297f2ad2.setIcon(icon_686ad7f9a4afbb0ba83f96fdbe1113b8);
+            
+    
+            var marker_d24ced75231b9f1b031bc4288d41d6f2 = L.marker(
+                [40.8283, -75.0742],
+                {
+}
+            ).addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var icon_663bcda4027e111ba5118705ff604b6e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a560825e6bb062b82a1817577acab80 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_710508f96a75b5761b69d9da68c8edaf = $(`<div id="html_710508f96a75b5761b69d9da68c8edaf" style="width: 100.0%; height: 100.0%;"><b>Warren County Veterans Services</b></div>`)[0];
+                popup_2a560825e6bb062b82a1817577acab80.setContent(html_710508f96a75b5761b69d9da68c8edaf);
+            
+        
+
+        marker_d24ced75231b9f1b031bc4288d41d6f2.bindPopup(popup_2a560825e6bb062b82a1817577acab80)
+        ;
+
+        
+    
+    
+                marker_d24ced75231b9f1b031bc4288d41d6f2.setIcon(icon_663bcda4027e111ba5118705ff604b6e);
+            
+    
+            var marker_a0e760ac8cdd51278dfa45fb595c18d1 = L.marker(
+                [40.7896, -74.9107],
+                {
+}
+            ).addTo(map_c24c1dc204b135a55780fc4251e76153);
+        
+    
+            var icon_6f1e6a08aa503e66917408eae28091c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc9f154f401d79e6b9a656809bc8aa0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23913a7cd6dd498c9e62f3eae8d21dcf = $(`<div id="html_23913a7cd6dd498c9e62f3eae8d21dcf" style="width: 100.0%; height: 100.0%;"><b>Warren County DMAVA VSO – Port Murray</b></div>`)[0];
+                popup_dc9f154f401d79e6b9a656809bc8aa0b.setContent(html_23913a7cd6dd498c9e62f3eae8d21dcf);
+            
+        
+
+        marker_a0e760ac8cdd51278dfa45fb595c18d1.bindPopup(popup_dc9f154f401d79e6b9a656809bc8aa0b)
+        ;
+
+        
+    
+    
+                marker_a0e760ac8cdd51278dfa45fb595c18d1.setIcon(icon_6f1e6a08aa503e66917408eae28091c8);
+            
+</script>
+</html>
